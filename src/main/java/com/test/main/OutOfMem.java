@@ -12,12 +12,14 @@ public class OutOfMem {
         while(count < 50000){
             list.add(new Object());
             System.out.println("Count = " + ++count);
-            gc_count++;
-            if(gc_count >= 10000){
-                System.gc();
-                gc_count = 0;
-            }
-            Thread.sleep(500);
+//            gc_count++;
+//            if(gc_count >= 10000){
+//                System.gc();
+//                gc_count = 0;
+//                System.out.println("Trigger GC!");
+//                Thread.sleep(500);
+//            }
+//            Thread.sleep(500);
         }
     }
 }
